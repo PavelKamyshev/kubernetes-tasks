@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  replicas: 2
+  selector:
+    app: nginx
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        commands:
+        ports:
+        - containerPort: 80

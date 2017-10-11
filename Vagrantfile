@@ -6,13 +6,14 @@ Vagrant.configure("2") do |config|
 		master.vm.network "public_network"
 		master.vm.network "private_network", ip: "10.10.1.10",
 			virtualbox__intnet: true
-#		master.vm.network "forwarded_port", guest: 8001, host: 30001
-#		master.vm.network "forwarded_port", guest: 80, host: 30002
+#		master.vm.network "forwarded_port", guest: 8001, host: 8181
+#		master.vm.network "forwarded_port", guest: 8080, host: 8888
 		master.vm.hostname = "kamyshevkubemaster"
 		master.vm.provider "virtualbox" do |vb|
 			vb.name = "ubuntu_kubemaster"
-			vb.memory = "2048"
+			vb.memory = "4096"
 			vb.cpus = 2
+			
 		master.vm.provision "shell", path: "master.sh", privileged: true
 		end
 	end

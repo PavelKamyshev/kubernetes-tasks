@@ -22,11 +22,11 @@
 [etcd] Wrote Static Pod manifest for a local etcd instance to "/etc/kubernetes/manifests/etcd.yaml"
 [init] Waiting for the kubelet to boot up the control plane as Static Pods from directory "/etc/kubernetes/manifests"
 [init] This often takes around a minute; or longer if the control plane images have to be pulled.
-[apiclient] All control plane components are healthy after 36.501639 seconds
+[apiclient] All control plane components are healthy after 28.506354 seconds
 [uploadconfig] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
 [markmaster] Will mark node kamyshevkubemaster as master by adding a label and a taint
 [markmaster] Master kamyshevkubemaster tainted and labelled with key/value: node-role.kubernetes.io/master=""
-[bootstraptoken] Using token: 34fb86.296439cb8169987e
+[bootstraptoken] Using token: aa6bde.bb350426f8c5cfee
 [bootstraptoken] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
 [bootstraptoken] Configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
 [bootstraptoken] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
@@ -48,5 +48,5 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 You can now join any number of machines by running the following on each node
 as root:
 
-  kubeadm join --token 34fb86.296439cb8169987e 10.10.1.10:6443 --discovery-token-ca-cert-hash sha256:1cf50f36d1f1aeb98f05a92e4187cb972499409dff0076eba496806fbacb68ea
+  kubeadm join --token aa6bde.bb350426f8c5cfee 10.10.1.10:6443 --discovery-token-ca-cert-hash sha256:70ac3901be710a23e185a79afb5d412d29b63e1151d86239d35685e5c2ca86f8
 
